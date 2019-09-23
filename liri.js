@@ -23,6 +23,7 @@ function concertThis(a) {
                     "\nLocation: " + concert.venue.city + ", " + (concert.venue.region ? concert.venue.region : concert.venue.country) +
                     "\nDate: " + moment(dateTime[0]).format("L") + "  " + moment(dateTime[1], "HH:mm:ss").format("LT")
                 console.log(results +"\n");
+                writeLog(results +"\n");
             }
         }).catch(function (error) {
             console.log(error.response)
@@ -42,6 +43,7 @@ function spotifyThis(a) {
                     "\nAlbum: " + track.album.name +
                     "\nPreview Link: " + (track.preview_url ? track.preview_url : "No preview available\n");
                 console.log(results);
+                writeLog(results + "\n");
             }
         }).catch(function (error) {
             console.log(error.response)
@@ -64,6 +66,7 @@ function movieThis(a) {
                 "\nActors: " + movie.Actors +
                 "\nAwards: " + (movie.Awards ? movie.Awards : "None\n");
             console.log(results);
+            writeLog(results +"\n");
 
         }).catch(function (error) {
             console.log(error.response)
@@ -78,6 +81,13 @@ function fromFile() {
         runLiri(dataArr[0], dataArr[1]);
 
     });
+}
+function writeLog(a){
+    fs.appendFile("log.txt", a, function(err) {
+        if (err) {
+          console.log(err);
+        }
+      });
 }
 
 function runLiri(a, b) {
