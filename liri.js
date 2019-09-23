@@ -4,6 +4,7 @@ var Spotify = require("node-spotify-api")
 var keys = require("./keys.js");
 var fs = require("fs");
 var inquiry = require("inquirer");
+var moment = require("moment")
 
 var spotKeys = new Spotify(keys.spotify);
 var userInput = process.argv;
@@ -16,11 +17,12 @@ function concertThis(a) {
         .then(function (response) {
             for (var i = 0; i < response.data.length; i++) {
                 var concert = response.data[i];
+                var dateTime = concert.datetime.split("T")
                 var results = "----------------------------" +
                     "\nVenue: " + concert.venue.name +
                     "\nLocation: " + concert.venue.city + ", " + (concert.venue.region ? concert.venue.region : concert.venue.country) +
-                    "\nTime: " + concert.datetime;
-                console.log(results);
+                    "\nDate: " + moment(dateTime[0]).format("L") + "  " + moment(dateTime[1], "HH:mm:ss").format("LT")
+                console.log(results +"\n");
             }
         }).catch(function (error) {
             console.log(error.response)
@@ -38,7 +40,7 @@ function spotifyThis(a) {
                     "\nArtist: " + track.artists[0].name +
                     "\nSong Name: " + track.name +
                     "\nAlbum: " + track.album.name +
-                    "\nPreview Link: " + (track.preview_url ? track.preview_url : "No preview available");
+                    "\nPreview Link: " + (track.preview_url ? track.preview_url : "No preview available\n");
                 console.log(results);
             }
         }).catch(function (error) {
@@ -60,13 +62,12 @@ function movieThis(a) {
                 "\nLanguage: " + movie.Language +
                 "\nPlot: " + movie.Plot +
                 "\nActors: " + movie.Actors +
-                "\nAwards: " + (movie.Awards ? movie.Awards : "None");
+                "\nAwards: " + (movie.Awards ? movie.Awards : "None\n");
             console.log(results);
 
         }).catch(function (error) {
             console.log(error.response)
         });
-
 }
 function fromFile() {
     fs.readFile("random.txt", "utf8", function (error, data) {
@@ -103,7 +104,7 @@ if (userInput.length > 2) {
     inquiry.prompt([
         {
             type: "list",
-            name: "liriFunction",
+            name: "liriFunc",
             message: "Please select a function for Liri",
             choices: ["concert-this", "spotify-this-song", "movie-this", "do-what-it-says"]
         },
@@ -114,10 +115,10 @@ if (userInput.length > 2) {
             message: "Please enter a search value\nIf you chose 'do-what-it-says' just hit enter"
         }
     ]).then(function (user) {
-        if (user.liriFunction === "do-what-it-says"){
+        if (user.liriFunc === "do-what-it-says") {
             fromFile();
-        }else{
-        runLiri(user.liriFunction, user.searchItem)
+        } else {
+            runLiri(user.liriFunc, user.searchItem)
         }
     })
 
