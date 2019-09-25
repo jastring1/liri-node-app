@@ -1,9 +1,14 @@
 <h1>LIRI Bot</h1>
+<h3><b> by: Tripp Stringfield (application engineer)</b></h3>
 
 
 <h3><b>Overview</b></h3>
 
-<p>In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.</p><br>
+<p>In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.</p><br><br>
+
+<h3><b>Organization</b></h3><br>
+
+<ul><li> Liri is organized as a set of functions. each function will perform a different task that will be passed to the main function of the program runLiri()</li><li> runLiri() will also accept another argument that will be the query term for the function that is trying to be called. ex. runLiri(movie-this,Inception)</li><li>A conditional statement starts the program to determine if the user will be running from the console or using the interactive menu provided by liri.</li></ul><br>
 
 <h3><b>How does Liri run?</h3></b><br>
 
@@ -38,6 +43,11 @@
 <img src="https://github.com/jastring1/liri-node-app/blob/master/images/liri9.JPG"></li><br><br>
 </p>
 </ul><br>
+
+<h3><b>Data Persistence</b></h3><br>
+
+<p><ul><li> Liri logs all results from the functions run into log.txt</li>
+  <li>Liri does not delete the data performed, Liri appends the results to the log each time runLiri() occurs</li></ul></p>
   
  <h3><b> Technologies Used</b></h3><br>
  <p>
