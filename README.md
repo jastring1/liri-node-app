@@ -12,18 +12,20 @@
   <li><b>(1) Command Line</b> - Liri can accept two arguments from the command line. The first will be the function that you want liri to perform and the second will be the search query that liri will perform the function on.</li>
 
 <li><b>(2) Interactive menu</b> - If Liri is run with no other arguments entered in the command line; Liri will provide a list of options that a user can choose from to be performed. Once the function is selected Liri will ask for the search term that the user wants to query.</li>
+</ul>
+</p>
+
+
+<h3><b>What can Liri Do?</h3></b>
+
+<p>Liri currently executes 4 different functions
 <ul>
+  <li><b>(1) concert-this</b> - Liri will search the Bands in Town API for all scheduled concerts of the given artist. Liri will return all of the events listed with this information: The name of the venue for the event, The location (city and state if the concert is in the USA, city and country if located outside the USA), The date and the time of the event(formatted by moment.js)</li>
 
+<li><b>(2) spotify-this</b> - Liri searches the Spotify API for relevant information for music tracks. Liri will return the closest 5 matches for a given track name. The information that liri provides for these tracks are: The artist, the song name, the album name from which the song is in, a link to a preview of the song from spotify(if available - if not liri says "No preview available".</li>
 
-What can Liri Do?
+<li><b>(3) movie-this</b> - Liri searches the OMDB databse for movies. Liri will choose the closest match of a movie compared to the search term that is provided.  The information that Liri provides for movie queries are: The title, the year released, the IMDB rating, the country produced in, The languages available, the plot, list of actors, and award wins and nominations(if any - if not displays none.</li>
 
-Liri currently executes 4 different functions
-
-(1) concert-this - Liri will search the Bands in Town API for all scheduled concerts of the given artist. Liri will return all of the events listed with this information: The name of the venue for the event, The location (city and state if the concert is in the USA, city and country if located outside the USA), The date and the time of the event(formatted by moment.js)
-
-(2) spotify-this - Liri searches the Spotify API for relevant information for music tracks. Liri will return the closest 5 matches for a given track name. The information that liri provides for these tracks are: The artist, the song name, the album name from which the song is in, a link to a preview of the song from spotify(if available - if not liri says "No preview available".
-
-(3) movie-this - Liri searches the OMDB databse for movies. Liri will choose the closest match of a movie compared to the search term that is provided.  The information that Liri provides for movie queries are: The title, the year released, the IMDB rating, the country produced in, The languages available, the plot, list of actors, and award wins and nominations(if any - if not displays none.
-
-(4) do-what-it-says - Liri also can perform searched based on information that is stored in Random.txt. Liri takes the first term of the file as the function that needs to be run and then second term as the search query for that function. 
+<li><b>(4) do-what-it-says</b> - Liri also can perform searched based on information that is stored in Random.txt. Liri takes the first term of the file as the function that needs to be run and then second term as the search query for that function.</li>
+</p>
 
