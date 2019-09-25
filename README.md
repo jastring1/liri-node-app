@@ -14,19 +14,28 @@
 <li><b>(2) Interactive menu</b> - If Liri is run with no other arguments entered in the command line; Liri will provide a list of options that a user can choose from to be performed. Once the function is selected Liri will ask for the search term that the user wants to query.</li><br>
 </ul>
 </p>
-![Liri Command line](/images/Capture.JPG)
+<img src="https://github.com/jastring1/liri-node-app/blob/master/images/Capture.JPG">
+<img src="https://github.com/jastring1/liri-node-app/blob/master/images/liri2.JPG">
 
 <h3><b>What can Liri Do?</h3></b><br>
 
-<p><b>Liri currently executes 4 different functions, each function will log the ressults to log.txt</b><br>
+<p><b>Liri currently executes 4 different functions, each function will log the results to log.txt</b><br>
 <ul>
-  <li><b>(1) concert-this</b> - Liri will search the Bands in Town API for all scheduled concerts of the given artist. Liri will return all of the events listed with this information: The name of the venue for the event, The location (city and state if the concert is in the USA, city and country if located outside the USA), The date and the time of the event(formatted by moment.js)</li><br><br>
+  <li><b>(1) concert-this</b> - Liri will search the Bands in Town API for all scheduled concerts of the given artist. Liri will return all of the events listed with this information: The name of the venue for the event, The location (city and state if the concert is in the USA, city and country if located outside the USA), The date and the time of the event(formatted by moment.js)
+  <img src="https://github.com/jastring1/liri-node-app/blob/master/images/liri-3.JPG"><br>
+  <img src="https://github.com/jastring1/liri-node-app/blob/master/images/liri4.JPG"></li><br>
+  <br>
 
-<li><b>(2) spotify-this</b> - Liri searches the Spotify API for relevant information for music tracks. Liri will return the closest 5 matches for a given track name. The information that liri provides for these tracks are: The artist, the song name, the album name from which the song is in, a link to a preview of the song from spotify(if available - if not liri says "No preview available".If no search term if provided, Liri defaults to "the sign"</li><br><br>
+<li><b>(2) spotify-this</b> - Liri searches the Spotify API for relevant information for music tracks. Liri will return the closest 5 matches for a given track name. The information that liri provides for these tracks are: The artist, the song name, the album name from which the song is in, a link to a preview of the song from spotify(if available - if not liri says "No preview available".If no search term if provided, Liri defaults to "the sign"
+<img src="https://github.com/jastring1/liri-node-app/blob/master/images/liri5.JPG"><br>
+<img src="https://github.com/jastring1/liri-node-app/blob/master/images/liri6.JPG"></li><br><br>
 
-<li><b>(3) movie-this</b> - Liri searches the OMDB databse for movies. Liri will choose the closest match of a movie compared to the search term that is provided.  The information that Liri provides for movie queries are: The title, the year released, the IMDB rating, the country produced in, The languages available, the plot, list of actors, and award wins and nominations(if any - if not displays none.If no search term if provided, Liri defaults to "Mr. Nobody"</li><br><br>
+<li><b>(3) movie-this</b> - Liri searches the OMDB databse for movies. Liri will choose the closest match of a movie compared to the search term that is provided.  The information that Liri provides for movie queries are: The title, the year released, the IMDB rating, the country produced in, The languages available, the plot, list of actors, and award wins and nominations(if any - if not displays none.If no search term if provided, Liri defaults to "Mr. Nobody"
+<img src="https://github.com/jastring1/liri-node-app/blob/master/images/liri7.JPG"></li><br><br>
 
-<li><b>(4) do-what-it-says</b> - Liri also can perform searched based on information that is stored in Random.txt. Liri takes the first term of the file as the function that needs to be run and then second term as the search query for that function.</li><br><br>
+<li><b>(4) do-what-it-says</b> - Liri also can perform searched based on information that is stored in Random.txt. Liri takes the first term of the file as the function that needs to be run and then second term as the search query for that function.
+<img src="https://github.com/jastring1/liri-node-app/blob/master/images/liri8.JPG"><br>
+<img src="https://github.com/jastring1/liri-node-app/blob/master/images/liri9.JPG"></li><br><br>
 </p>
 </ul><br>
   
