@@ -14,6 +14,8 @@
 <li><b>(2) Interactive menu</b> - If Liri is run with no other arguments entered in the command line; Liri will provide a list of options that a user can choose from to be performed. Once the function is selected Liri will ask for the search term that the user wants to query.</li><br>
 </ul>
 </p>
+![Liri Command line](/images/Capture.jpg)
+![Liri Interactive](/images/liri2.jpg)
 
 <h3><b>What can Liri Do?</h3></b><br>
 
