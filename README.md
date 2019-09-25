@@ -47,7 +47,8 @@
 <h3><b>Data Persistence</b></h3><br>
 
 <p><ul><li> Liri logs all results from the functions run into log.txt</li>
-  <li>Liri does not delete the data performed, Liri appends the results to the log each time runLiri() occurs</li></ul></p>
+  <li>Liri does not delete the data performed, Liri appends the results to the log each time runLiri() occurs
+  <img src="https://github.com/jastring1/liri-node-app/blob/master/images/liri10.JPG"></li></ul></p>
   
  <h3><b> Technologies Used</b></h3><br>
  <p>
