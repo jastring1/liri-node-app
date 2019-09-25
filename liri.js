@@ -17,11 +17,11 @@ function concertThis(a) {
         .then(function (response) {
             for (var i = 0; i < response.data.length; i++) {
                 var concert = response.data[i];
-                var dateTime = concert.datetime.split("T")
+                var dateTime = concert.datetime.split("T");
                 var results = "----------------------------" +
                     "\nVenue: " + concert.venue.name +
                     "\nLocation: " + concert.venue.city + ", " + (concert.venue.region ? concert.venue.region : concert.venue.country) +
-                    "\nDate: " + moment(dateTime[0]).format("L") + "  " + moment(dateTime[1], "HH:mm:ss").format("LT")
+                    "\nDate: " + moment(dateTime[0]).format("L") + " -- " + moment(dateTime[1], "HH:mm:ss").format("LT")
                 console.log(results +"\n");
                 writeLog(results +"\n");
             }
@@ -122,7 +122,7 @@ if (userInput.length > 2) {
         {
             type: "input",
             name: "searchItem",
-            message: "Please enter a search value\nIf you chose 'do-what-it-says' just hit enter"
+            message: "Please enter a search value\nIf you chose 'do-what-it-says' just hit enter\n"
         }
     ]).then(function (user) {
         if (user.liriFunc === "do-what-it-says") {
